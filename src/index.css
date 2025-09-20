@@ -8,46 +8,29 @@
 
 @layer base {
   :root {
-    /* Dark futuristic background */
+    /* Dark mode (default) */
     --background: 220 30% 5%;
     --foreground: 220 15% 95%;
-
-    /* Cards with subtle glow */
     --card: 220 25% 8%;
     --card-foreground: 220 15% 95%;
-
-    /* Popover styling */
     --popover: 220 25% 8%;
     --popover-foreground: 220 15% 95%;
-
-    /* Primary neon purple */
     --primary: 270 100% 70%;
     --primary-foreground: 220 30% 5%;
-
-    /* Secondary neon blue */
     --secondary: 220 100% 65%;
     --secondary-foreground: 220 30% 5%;
-
-    /* Muted elements */
     --muted: 220 20% 15%;
     --muted-foreground: 220 15% 65%;
-
-    /* Accent neon cyan */
     --accent: 180 100% 70%;
     --accent-foreground: 220 30% 5%;
-
-    /* Destructive elements */
     --destructive: 0 85% 60%;
     --destructive-foreground: 220 15% 95%;
-
-    /* Borders and inputs */
     --border: 220 20% 20%;
     --input: 220 20% 15%;
     --ring: 270 100% 70%;
-
     --radius: 0.75rem;
 
-    /* Neon gradient variables */
+    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(270 100% 70%) 0%, hsl(220 100% 65%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(220 100% 65%) 0%, hsl(180 100% 70%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(180 100% 70%) 0%, hsl(270 100% 70%) 100%);
@@ -61,6 +44,40 @@
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .light {
+    /* Light mode colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 270 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 100% 45%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 180 100% 40%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 270 100% 50%;
+
+    /* Light mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 100% 50%) 0%, hsl(220 100% 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220 100% 45%) 0%, hsl(180 100% 40%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 40%) 0%, hsl(270 100% 50%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 96%) 100%);
+
+    /* Light mode glow effects */
+    --glow-primary: 0 0 20px hsl(270 100% 50% / 0.3), 0 0 40px hsl(270 100% 50% / 0.1);
+    --glow-secondary: 0 0 20px hsl(220 100% 45% / 0.3), 0 0 40px hsl(220 100% 45% / 0.1);
+    --glow-accent: 0 0 20px hsl(180 100% 40% / 0.3), 0 0 40px hsl(180 100% 40% / 0.1);
   }
 
 }
