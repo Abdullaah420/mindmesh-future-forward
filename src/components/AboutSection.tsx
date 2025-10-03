@@ -64,10 +64,11 @@ const AboutSection = () => {
             <span>About MindMesh</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4">
-            <span className="gradient-text">Innovators</span> at Heart
+            <span className="gradient-text">Where Innovation</span> Meets Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a passionate team of developers, AI specialists, and creative thinkers dedicated to transforming businesses through technology.
+            We don't just write code—we architect digital experiences that transform industries. 
+            Backed by published research and real-world impact, we're developers who push boundaries.
           </p>
         </div>
 
@@ -75,13 +76,16 @@ const AboutSection = () => {
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-3xl font-orbitron font-semibold">Our Story</h3>
+              <h3 className="text-3xl font-orbitron font-semibold">Built on Research, Proven by Results</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2020, MindMesh emerged from a simple belief: that every business deserves access to cutting-edge technology solutions. What started as a small team of passionate developers has grown into a full-service software house specializing in AI-powered web solutions.
+                  <strong className="text-foreground">We're not your average dev shop.</strong> Born from academic research and battle-tested in production, 
+                  MindMesh bridges the gap between theoretical excellence and practical business impact. Our team has published peer-reviewed papers 
+                  in leading tech journals while delivering 100+ real-world projects.
                 </p>
                 <p>
-                  Today, we've successfully delivered 100+ projects, ranging from simple websites to complex AI integrations, helping businesses across various industries digital transform and achieve their goals.
+                  From startups to enterprises, we've engineered solutions that don't just work—they scale, evolve, and drive measurable growth. 
+                  <strong className="text-foreground"> Every line of code is backed by expertise. Every project is a testament to what's possible when innovation meets execution.</strong>
                 </p>
               </div>
               <Button variant="outline" className="border-primary/50 hover:bg-primary/10">
