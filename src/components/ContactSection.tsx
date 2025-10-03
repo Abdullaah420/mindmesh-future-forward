@@ -62,10 +62,10 @@ const ContactSection = () => {
             <span>Get In Touch</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4">
-            Let's <span className="gradient-text">Connect</span>
+            Let's Build Something <span className="gradient-text">Great</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Let's discuss your project and bring your vision to life.
+            Ready to transform your business? Start a conversation with us today.
           </p>
         </div>
 

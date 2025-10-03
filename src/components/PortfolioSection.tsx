@@ -75,13 +75,13 @@ const PortfolioSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-card/50 border border-border rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm mb-4">
             <Eye className="w-4 h-4 text-accent" />
-            <span>Our Portfolio</span>
+            <span>Proven Results</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4">
-            <span className="gradient-text">Success</span> Stories
+            Client Success <span className="gradient-text">Stories</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our portfolio of innovative projects that have transformed businesses across various industries.
+            Real projects. Real impact. Real results.
           </p>
         </div>
 

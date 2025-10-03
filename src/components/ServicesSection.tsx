@@ -15,45 +15,24 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Globe,
-      title: 'Custom Websites & Web Apps',
-      description: 'Responsive, fast, and scalable web solutions built with modern technologies.',
-      features: ['React/Next.js', 'E-commerce', 'Progressive Web Apps', 'Custom CMS'],
+      title: 'Custom Web Development',
+      description: 'Beautiful, fast, responsive websites and web applications tailored to your business needs.',
+      features: ['Modern React/Next.js', 'E-commerce Solutions', 'Progressive Web Apps', 'Responsive Design'],
       gradient: 'from-primary to-secondary'
     },
     {
       icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent solutions powered by cutting-edge AI and machine learning algorithms.',
-      features: ['Predictive Analytics', 'Recommendation Systems', 'Data Processing', 'Model Training'],
+      title: 'AI Integration',
+      description: 'Transform your business with intelligent AI-powered features and automation.',
+      features: ['Chatbots & NLP', 'Computer Vision', 'Predictive Analytics', 'Smart Automation'],
       gradient: 'from-secondary to-accent'
     },
     {
-      icon: MessageSquare,
-      title: 'Chatbots & NLP',
-      description: 'Conversational AI and natural language processing for enhanced user experiences.',
-      features: ['Custom Chatbots', 'Voice Assistants', 'Text Analysis', 'Language Translation'],
-      gradient: 'from-accent to-primary'
-    },
-    {
-      icon: Eye,
-      title: 'Computer Vision',
-      description: 'Advanced image and video analysis solutions for various industries.',
-      features: ['Object Detection', 'Facial Recognition', 'OCR Solutions', 'Quality Control'],
-      gradient: 'from-primary to-accent'
-    },
-    {
-      icon: Puzzle,
+      icon: Cpu,
       title: 'System Integrations',
-      description: 'Seamless integration of existing systems and third-party services.',
-      features: ['API Development', 'Database Migration', 'Legacy Modernization', 'Cloud Services'],
-      gradient: 'from-secondary to-primary'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Solutions',
-      description: 'Cross-platform mobile applications with native performance.',
-      features: ['React Native', 'Flutter', 'iOS & Android', 'PWA Development'],
-      gradient: 'from-accent to-secondary'
+      description: 'Seamlessly connect your existing tools and build custom solutions that work together.',
+      features: ['API Development', 'Third-party Integration', 'Database Solutions', 'Cloud Services'],
+      gradient: 'from-accent to-primary'
     }
   ];
 
@@ -64,13 +43,13 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-card/50 border border-border rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm mb-4">
             <Code2 className="w-4 h-4 text-primary" />
-            <span>Our Services</span>
+            <span>What We Do</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4">
-            <span className="gradient-text">Comprehensive</span> Solutions
+            Our <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From concept to deployment, we deliver cutting-edge technology solutions that drive business growth.
+            Three core capabilities that power modern digital success
           </p>
         </div>
 

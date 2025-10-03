@@ -1,23 +1,21 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
+import ScrollBackground from '@/components/ScrollBackground';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
-import AboutSection from '@/components/AboutSection';
 import PortfolioSection from '@/components/PortfolioSection';
-import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <ScrollBackground />
       <Navigation />
       <main>
         <HeroSection />
         <ServicesSection />
-        <AboutSection />
         <PortfolioSection />
-        <BlogSection />
         <ContactSection />
       </main>
       <Footer />
