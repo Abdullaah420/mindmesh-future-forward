@@ -1,50 +1,55 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Code, Eye } from 'lucide-react';
+import {IMAGES} from '../images/images';
 
 const PortfolioSection = () => {
   const projects = [
     {
-      title: 'EcoTrack AI',
-      category: 'AI/ML Platform',
-      description: 'Advanced sustainability tracking platform with AI-powered insights for carbon footprint optimization.',
-      image: '/api/placeholder/600/400',
-      tags: ['React', 'Python', 'TensorFlow', 'AWS'],
-      problem: 'Companies struggle to track and optimize their environmental impact',
-      solution: 'AI-powered analytics platform with real-time monitoring and actionable insights',
-      results: '40% reduction in client carbon footprints, 500+ companies onboarded'
+      title: 'Guide Connect',
+      category: 'Travel Platform',
+      description: 'All-in-one travel assistant for booking flights, hotels, car rentals and creating personalized itineraries with smart recommendations.',
+      image: IMAGES.guideConnection,
+      tags: ['React', 'Node.js', 'MongoDB', 'AWS', 'Machine Learning', 'Recommendation AI', 'GenAI', 'Data Science'],
+      problem: 'Travelers waste time switching between multiple booking sites and dealing with inconsistent trip data.',
+      solution: 'Unified travel platform that aggregates bookings, manages itineraries, offers ML-powered personalized recommendations, and handles payments and rentals in one place.',
+      results: 'Reduced booking time by ~60%, increased conversion by 30%, and onboarded thousands of active users.',
+      url: 'https://example.com/guide-connect'
     },
     {
-      title: 'MedChat Pro',
-      category: 'Healthcare Chatbot',
-      description: 'HIPAA-compliant medical chatbot with NLP for patient triage and appointment scheduling.',
-      image: '/api/placeholder/600/400',
-      tags: ['Next.js', 'NLP', 'Node.js', 'MongoDB'],
-      problem: 'Healthcare providers overwhelmed with routine patient inquiries',
-      solution: 'Intelligent chatbot for 24/7 patient support and automated triage',
-      results: '80% reduction in call volume, 95% patient satisfaction rate'
+      title: 'Fizzi',
+      category: 'Consumer Web App',
+      description: 'A playful, responsive soda & beverage web app for discovering flavors, customizing bottles and placing local delivery or subscription orders.',
+      image: IMAGES.fizzi,
+      tags: ['React', 'Next.js', 'Node.js', 'MongoDB', 'AWS', 'Stripe'],
+      problem: 'No modern, engaging web experience exists for discovering craft sodas and managing recurring beverage orders.',
+      solution: 'Interactive storefront with product discovery, user reviews, subscriptions, easy checkout and admin dashboard for managing inventory & promos.',
+      results: 'Increased repeat orders by 45% and average order value by 20% for pilot stores.',
+      url: 'https://example.com/fizzi'
     },
     {
-      title: 'RetailVision',
-      category: 'Computer Vision',
-      description: 'Smart retail analytics using computer vision for inventory management and customer behavior analysis.',
-      image: '/api/placeholder/600/400',
-      tags: ['Python', 'OpenCV', 'React', 'PostgreSQL'],
-      problem: 'Retailers lack real-time insights into inventory and customer patterns',
-      solution: 'CV-powered analytics for automated inventory and behavior tracking',
-      results: '60% inventory accuracy improvement, 25% sales increase'
+      title: 'Lilly',
+      category: 'Healthcare AI',
+      description: 'AI-driven drug information assistant for clinical staff: enter a drug name and receive an authoritative, well-formatted report with citations and PDF export.',
+      image: IMAGES.lilly,
+      tags: ['Python', 'FastAPI', 'MongoDB', 'OpenAI', 'Pandas', 'AWS', 'NLP', 'GenAI', 'Data Science'],
+      problem: 'Clinical staff spend too much time searching scattered sources for reliable drug monographs and up-to-date safety data.',
+      solution: 'Automated aggregation and structured summarization from credible medical sources, with citation links, structured UI and one-click PDF export for staff use.',
+      results: 'Reduced research time per query by ~80% and improved medication information accuracy in pilot clinics.',
+      url: 'https://example.com/lilly'
     },
     {
-      title: 'FinanceFlow',
-      category: 'Web Application',
-      description: 'Comprehensive financial management platform with AI-driven investment recommendations.',
-      image: '/api/placeholder/600/400',
-      tags: ['Vue.js', 'Python', 'Machine Learning', 'Stripe'],
-      problem: 'Small businesses need accessible financial planning tools',
-      solution: 'All-in-one financial platform with AI investment guidance',
-      results: '10,000+ users, $50M+ in managed investments'
+      title: 'AEZEN',
+      category: 'AI CRM & Support',
+      description: 'AI-powered CRM with chatbot, ticketing, voice/AI calls, workflows and omnichannel integrations — trainable assistant that grows from intern to pro.',
+      image: IMAGES.aezen,
+      tags: ['React', 'Node.js', 'MongoDB', 'AWS', 'Rasa', 'Redis', 'Conversational AI', 'NLP', 'GenAI'],
+      problem: 'Brands struggle to scale consistent, fast customer support across many channels while keeping costs down.',
+      solution: 'All-in-one support platform combining intelligent chatbots, ticketing, automation workflows, social integrations, and training pipelines for the assistant.',
+      results: 'Cut first-response times by ~70%, reduced support costs by 50%, and increased customer satisfaction in deployed pilots.',
+      url: 'https://example.com/aezen'
     },
     {
       title: 'SmartFactory',
@@ -54,7 +59,8 @@ const PortfolioSection = () => {
       tags: ['React', 'IoT', 'Predictive ML', 'Azure'],
       problem: 'Manufacturing downtime costs due to unexpected equipment failures',
       solution: 'IoT sensors with AI-powered predictive maintenance alerts',
-      results: '70% reduction in unplanned downtime, $2M+ cost savings'
+      results: '70% reduction in unplanned downtime, $2M+ cost savings',
+      url: ''
     },
     {
       title: 'EduMentor AI',
@@ -64,9 +70,22 @@ const PortfolioSection = () => {
       tags: ['React Native', 'NLP', 'Recommendation AI', 'Firebase'],
       problem: 'Students need personalized learning experiences at scale',
       solution: 'AI-powered adaptive learning with personalized tutoring',
-      results: '85% improvement in learning outcomes, 50,000+ students'
+      results: '85% improvement in learning outcomes, 50,000+ students',
+      url: ''
     }
   ];
+
+  // Only opens URL if it's a real non-example http(s) URL.
+  const handleCardClick = useCallback((url?: string) => {
+    if (!url) return;
+    // treat example.com as dummy placeholder that should NOT open
+    const valid = /^https?:\/\/(?!example\.com)(.+)/i.test(url);
+    if (valid) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      // placeholder/dummy URL — do nothing
+    }
+  }, []);
 
   return (
     <section id="portfolio" className="py-20 relative overflow-hidden">
@@ -110,18 +129,39 @@ const PortfolioSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="group bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover-glow backdrop-blur-sm overflow-hidden"
+              className="group bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover-glow backdrop-blur-sm overflow-hidden cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handleCardClick(project.url)}
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter') handleCardClick(project.url); }}
+              role="button"
             >
-              {/* Project Image */}
-              <div className="aspect-video bg-gradient-primary opacity-20 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Code className="w-16 h-16 text-primary/60" />
-                </div>
-                <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-card/80 text-foreground">
-                    {project.category}
-                  </Badge>
+              {/* Project Image - updated to show images cleanly, responsive and professional */}
+              <div className="relative overflow-hidden">
+                {/* Responsive height ensures consistent appearance on different screens */}
+                <div className="w-full h-44 sm:h-56 md:h-64 lg:h-72 relative">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/api/placeholder/600/400'; }}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  {/* subtle overlay for readable text/badge without dimming the image */}
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-white/10 to-white/40 opacity-90"></div>
+
+                  {/* decorative code icon (keeps original intent, but subtle) */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <Code className="w-16 h-16 text-primary/60 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                  </div>
+
+                  {/* Category badge */}
+                  <div className="absolute top-4 right-4">
+                    <Badge variant="secondary" className="bg-card/80 text-foreground">
+                      {project.category}
+                    </Badge>
+                  </div>
                 </div>
               </div>
 
@@ -170,6 +210,7 @@ const PortfolioSection = () => {
                     variant="outline" 
                     size="sm" 
                     className="flex-1 border-primary/50 hover:bg-primary/10"
+                    onClick={(e) => { e.stopPropagation(); handleCardClick(project.url); }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Project
@@ -178,6 +219,7 @@ const PortfolioSection = () => {
                     variant="outline" 
                     size="sm" 
                     className="border-secondary/50 hover:bg-secondary/10"
+                    onClick={(e) => { e.stopPropagation(); /* placeholder - add case study URL later */ }}
                   >
                     Case Study
                   </Button>
