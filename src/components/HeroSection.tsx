@@ -24,20 +24,6 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter leading-relaxed">
               MindMesh transforms businesses with custom web development and AI integration. From sleek websites to powerful AI tools—we deliver solutions that work.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <div className="flex items-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
-                <span className="text-primary font-semibold">✓</span>
-                <span>100+ Projects Delivered</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
-                <span className="text-primary font-semibold">✓</span>
-                <span>50+ Happy Clients</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
-                <span className="text-primary font-semibold">✓</span>
-                <span>4 Years Excellence</span>
-              </div>
-            </div>
           </div>
 
           {/* CTA Buttons */}

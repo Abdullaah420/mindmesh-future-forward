@@ -71,6 +71,26 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
+          <div className="text-center px-6 py-4 bg-card/30 backdrop-blur-sm rounded-lg border border-border">
+            <div className="text-3xl md:text-4xl font-orbitron font-bold gradient-text">100+</div>
+            <div className="text-sm md:text-base text-muted-foreground mt-1">Projects Completed</div>
+          </div>
+          <div className="text-center px-6 py-4 bg-card/30 backdrop-blur-sm rounded-lg border border-border">
+            <div className="text-3xl md:text-4xl font-orbitron font-bold gradient-text">50+</div>
+            <div className="text-sm md:text-base text-muted-foreground mt-1">Happy Clients</div>
+          </div>
+          <div className="text-center px-6 py-4 bg-card/30 backdrop-blur-sm rounded-lg border border-border">
+            <div className="text-3xl md:text-4xl font-orbitron font-bold gradient-text">24/7</div>
+            <div className="text-sm md:text-base text-muted-foreground mt-1">Support Available</div>
+          </div>
+          <div className="text-center px-6 py-4 bg-card/30 backdrop-blur-sm rounded-lg border border-border">
+            <div className="text-3xl md:text-4xl font-orbitron font-bold gradient-text">98%</div>
+            <div className="text-sm md:text-base text-muted-foreground mt-1">Client Satisfaction</div>
+          </div>
+        </div>
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-card/50 border border-border rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm mb-4">
