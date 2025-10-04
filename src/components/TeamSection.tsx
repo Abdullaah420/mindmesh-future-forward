@@ -3,14 +3,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Linkedin, Twitter, Github } from 'lucide-react';
+import {IMAGES} from '../images/images';
 
 const TeamSection = () => {
   const team = [
     {
-      name: 'Alex Rodriguez',
-      role: 'CEO & Lead Developer',
+      name: 'Abdullah Ibrahim',
+      role: 'CEO & Co-Founder',
       expertise: 'Full-Stack Development',
-      image: '/placeholder.svg',
+      image: IMAGES.abdullah,
       bio: 'Expert in building scalable web applications with 10+ years of experience.',
       social: {
         linkedin: '#',
@@ -19,10 +20,10 @@ const TeamSection = () => {
       }
     },
     {
-      name: 'Sarah Chen',
-      role: 'AI/ML Engineer',
+      name: 'Omar Faiz',
+      role: 'Co-Founder & CTO',
       expertise: 'Machine Learning',
-      image: '/placeholder.svg',
+      image: IMAGES.omar,
       bio: 'Specializes in integrating AI solutions into production environments.',
       social: {
         linkedin: '#',
@@ -31,10 +32,10 @@ const TeamSection = () => {
       }
     },
     {
-      name: 'Emily Watson',
-      role: 'Data Scientist',
+      name: 'Noman Jaffar',
+      role: 'Co-Founder & Head of Data Science',
       expertise: 'Data Analytics',
-      image: '/placeholder.svg',
+      image: IMAGES.noman,
       bio: 'Transforms complex data into actionable business insights.',
       social: {
         linkedin: '#',
@@ -42,18 +43,7 @@ const TeamSection = () => {
         github: '#'
       }
     },
-    {
-      name: 'Michael Johnson',
-      role: 'Solutions Architect',
-      expertise: 'System Design',
-      image: '/placeholder.svg',
-      bio: 'Designs robust, scalable architectures for enterprise applications.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    }
+   
   ];
 
   return (
