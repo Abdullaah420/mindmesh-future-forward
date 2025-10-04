@@ -2,9 +2,11 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import ScrollBackground from '@/components/ScrollBackground';
 import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
+import ServicesSection from '@/components/ServicesSection';
+import PapersPreviewSection from '@/components/PapersPreviewSection';
+import TeamSection from '@/components/TeamSection';
+import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -15,9 +17,11 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
         <PortfolioSection />
+        <ServicesSection />
+        <PapersPreviewSection />
+        <TeamSection />
+        <AboutSection />
         <ContactSection />
       </main>
       <Footer />
